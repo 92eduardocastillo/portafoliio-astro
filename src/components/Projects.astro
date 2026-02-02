@@ -1,0 +1,88 @@
+---
+const projects = [
+	{
+		title: 'Sistema de Control de Línea de Producción',
+		category: 'PLC',
+		description: 'Automatización completa de línea de ensamblaje con PLC Siemens S7-1200, HMI y monitoreo SCADA para optimización de procesos.',
+		technologies: ['Siemens TIA Portal', 'SCADA', 'Profinet', 'HMI'],
+		image: '🏭'
+	},
+	{
+		title: 'Plataforma de Monitoreo IoT Industrial',
+		category: 'Web + PLC',
+		description: 'Dashboard web en tiempo real para visualización de datos de sensores industriales con comunicación MQTT y base de datos PostgreSQL.',
+		technologies: ['React', 'Node.js', 'Grafana', 'MQTT', 'PostgreSQL', 'WebSockets'],
+		image: '📊'
+	},
+	{
+		title: 'Control de Sistema de Climatización',
+		category: 'PLC',
+		description: 'Sistema de control automático de HVAC con PLC Allen-Bradley, sensores de temperatura/humedad y control PID.',
+		technologies: ['RSLogix 5000', 'ControlLogix', 'EtherNet/IP'],
+		image: '🌡️'
+	},
+	{
+		title: 'E-commerce con Panel de Gestión',
+		category: 'Web',
+		description: 'Tienda online completa con carrito de compras, pasarela de pagos, panel administrativo y sistema de inventario.',
+		technologies: ['Next.js', 'TypeScript', 'Stripe', 'Prisma', 'Tailwind'],
+		image: '🛒'
+	},
+	{
+		title: 'Sistema SCADA para Tratamiento de Aguas',
+		category: 'PLC',
+		description: 'Supervisión y control de planta de tratamiento con alarmas, históricos y generación de reportes automáticos.',
+		technologies: ['WinCC', 'Siemens S7-1500', 'SQL Server'],
+		image: '💧'
+	},
+	{
+		title: 'API REST para Integración Industrial',
+		category: 'Web',
+		description: 'API robusta para conectar sistemas PLC con aplicaciones web, permitiendo lectura/escritura de variables en tiempo real.',
+		technologies: ['FastAPI', 'Python', 'OPC UA', 'Redis', 'Docker'],
+		image: '🔌'
+	}
+];
+---
+
+<section id="proyectos" class="py-24 bg-slate-900 relative">
+	<!-- Fondo con patrón -->
+	<div class="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]"></div>
+	
+	<div class="max-w-7xl mx-auto px-8 relative z-10">
+		<div class="text-center mb-16">
+			<span class="text-purple-400 font-semibold text-sm uppercase tracking-wider mb-2 block">Portfolio</span>
+			<h2 class="text-4xl md:text-6xl font-extrabold text-white mb-4">
+				Proyectos <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">Destacados</span>
+			</h2>
+			<p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto">
+				Soluciones innovadoras que combinan automatización industrial con desarrollo web moderno
+			</p>
+			<div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto rounded-full mt-4"></div>
+		</div>
+
+		<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+			{projects.map(project => (
+				<article class="group bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 transition-all hover:-translate-y-3 hover:shadow-[0_30px_60px_rgba(168,85,247,0.3)] border border-slate-700/50 hover:border-purple-500/50 relative overflow-hidden">
+					<!-- Efecto de brillo en hover -->
+					<div class="absolute inset-0 bg-gradient-to-r from-purple-600/0 via-purple-600/10 to-purple-600/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+					
+					<div class="relative z-10">
+						<div class="text-6xl mb-6">{project.image}</div>
+						<span class="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1.5 rounded-full text-xs font-bold mb-4 uppercase tracking-wide">
+							{project.category}
+						</span>
+						<h3 class="text-2xl font-bold text-white mb-4 leading-tight group-hover:text-purple-400 transition-colors">{project.title}</h3>
+						<p class="text-slate-300 leading-relaxed mb-6">{project.description}</p>
+						<div class="flex flex-wrap gap-2">
+							{project.technologies.map(tech => (
+								<span class="bg-slate-700/50 text-purple-300 px-3 py-1.5 rounded-lg text-xs font-medium border border-slate-600/50">{tech}</span>
+							))}
+						</div>
+					</div>
+				</article>
+			))}
+		</div>
+	</div>
+</section>
+
