@@ -1,0 +1,75 @@
+<!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Descubre por qué Astro está revolucionando el desarrollo web con su arquitectura islands y rendimiento excepcional"><meta name="author" content="María González"><title>Guía Completa de Astro: El Framework del Futuro | Mi Blog</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/ejemplo-astro.CEnY6OFU.css"></head> <body> <nav class="navbar"> <div class="container"> <a href="/" class="logo">Mi Blog</a> <div class="nav-links"> <a href="/">Inicio</a> <a href="/blog">Blog</a> <a href="/about">Acerca de</a> </div> </div> </nav> <main class="container"> <article class="post"> <header class="post-header"> <span class="category">Desarrollo Web</span> <h1 class="post-title">Guía Completa de Astro: El Framework del Futuro</h1> <p class="post-description">Descubre por qué Astro está revolucionando el desarrollo web con su arquitectura islands y rendimiento excepcional</p> <div class="post-meta"> <div class="meta-item"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="12" cy="12" r="10"></circle> <polyline points="12 6 12 12 16 14"></polyline> </svg> <time datetime="2024-02-01T00:00:00.000Z"> 1 de febrero de 2024 </time> </div> <div class="meta-item"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path> <circle cx="12" cy="7" r="4"></circle> </svg> <span>María González</span> </div> <div class="meta-item"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path> <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path> </svg> <span>4 min de lectura</span> </div> </div> <div class="tags"> <span class="tag">#astro</span><span class="tag">#javascript</span><span class="tag">#performance</span><span class="tag">#web</span> </div> </header> <div class="featured-image"> <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=600&fit=crop" alt="Guía Completa de Astro: El Framework del Futuro"> </div> <div class="post-content"> <h2 id="qué-es-astro-y-por-qué-deberías-usarlo">¿Qué es Astro y por qué deberías usarlo?</h2>
+<p>Astro es un <strong>framework web moderno</strong> que te permite construir sitios web más rápidos con menos JavaScript del lado del cliente. A diferencia de otros frameworks, Astro adopta un enfoque único llamado <strong>“Islands Architecture”</strong> que puede mejorar dramáticamente el rendimiento de tu sitio.</p>
+<h3 id="las-ventajas-principales-de-astro">Las ventajas principales de Astro</h3>
+<p>Cuando comencé a usar Astro hace unos meses, quedé impresionada por su simplicidad y potencia. Aquí están las características que más me han llamado la atención:</p>
+<ol>
+<li><strong>Cero JavaScript por defecto</strong>: Astro envía HTML estático al navegador, agregando JavaScript solo cuando es absolutamente necesario</li>
+<li><strong>Compatibilidad con múltiples frameworks</strong>: Puedes usar React, Vue, Svelte o cualquier otro framework, incluso en el mismo proyecto</li>
+<li><strong>Excelente rendimiento</strong>: Los sitios construidos con Astro cargan increíblemente rápido</li>
+<li><strong>Developer Experience superior</strong>: La sintaxis es intuitiva y el tooling es excelente</li>
+</ol>
+<h2 id="arquitectura-islands-el-secreto-del-rendimiento">Arquitectura Islands: El secreto del rendimiento</h2>
+<p>La “arquitectura islands” es el concepto revolucionario detrás de Astro. Imagina tu página como un océano de HTML estático con pequeñas “islas” de interactividad donde realmente las necesitas.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="astro"><code><span class="line"><span style="color:#6A737D">---</span></span>
+<span class="line"><span style="color:#6A737D">// Importa solo lo que necesitas</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> Header </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '../components/Header.astro'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> InteractiveCounter </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '../components/Counter.jsx'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#6A737D">---</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#79B8FF">Header</span><span style="color:#E1E4E8"> /></span></span>
+<span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">main</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">h1</span><span style="color:#E1E4E8">>Mi página súper rápida&#x3C;/</span><span style="color:#85E89D">h1</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">p</span><span style="color:#E1E4E8">>Este contenido es estático y carga instantáneamente&#x3C;/</span><span style="color:#85E89D">p</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">  </span></span>
+<span class="line"><span style="color:#6A737D">  &#x3C;!-- Solo esta isla tiene JavaScript --></span></span>
+<span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#79B8FF">InteractiveCounter</span><span style="color:#B392F0"> client:load</span><span style="color:#E1E4E8"> /></span></span>
+<span class="line"><span style="color:#E1E4E8">&#x3C;/</span><span style="color:#85E89D">main</span><span style="color:#E1E4E8">></span></span></code></pre>
+<h3 id="directivas-de-cliente">Directivas de cliente</h3>
+<p>Astro te da control total sobre cuándo y cómo se hidrata cada componente:</p>
+<ul>
+<li><code>client:load</code> - Carga inmediatamente</li>
+<li><code>client:idle</code> - Carga cuando el navegador está inactivo</li>
+<li><code>client:visible</code> - Carga cuando el elemento es visible</li>
+<li><code>client:media</code> - Carga basado en media queries</li>
+</ul>
+<blockquote>
+<p><strong>Consejo Pro</strong>: Usa <code>client:visible</code> para componentes below the fold. Tu Lighthouse score te lo agradecerá.</p>
+</blockquote>
+<h2 id="trabajando-con-content-collections">Trabajando con Content Collections</h2>
+<p>Una de las características más poderosas de Astro son las Content Collections. Te permiten trabajar con Markdown de forma type-safe:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#6A737D">// src/content/config.ts</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { defineCollection, z } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> 'astro:content'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> blogCollection</span><span style="color:#F97583"> =</span><span style="color:#B392F0"> defineCollection</span><span style="color:#E1E4E8">({</span></span>
+<span class="line"><span style="color:#E1E4E8">  schema: z.</span><span style="color:#B392F0">object</span><span style="color:#E1E4E8">({</span></span>
+<span class="line"><span style="color:#E1E4E8">    title: z.</span><span style="color:#B392F0">string</span><span style="color:#E1E4E8">(),</span></span>
+<span class="line"><span style="color:#E1E4E8">    description: z.</span><span style="color:#B392F0">string</span><span style="color:#E1E4E8">(),</span></span>
+<span class="line"><span style="color:#E1E4E8">    pubDate: z.</span><span style="color:#B392F0">date</span><span style="color:#E1E4E8">(),</span></span>
+<span class="line"><span style="color:#E1E4E8">    author: z.</span><span style="color:#B392F0">string</span><span style="color:#E1E4E8">(),</span></span>
+<span class="line"><span style="color:#E1E4E8">    tags: z.</span><span style="color:#B392F0">array</span><span style="color:#E1E4E8">(z.</span><span style="color:#B392F0">string</span><span style="color:#E1E4E8">()),</span></span>
+<span class="line"><span style="color:#E1E4E8">  }),</span></span>
+<span class="line"><span style="color:#E1E4E8">});</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> const</span><span style="color:#79B8FF"> collections</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#9ECBFF">  'blog'</span><span style="color:#E1E4E8">: blogCollection,</span></span>
+<span class="line"><span style="color:#E1E4E8">};</span></span></code></pre>
+<p>Esto te da <strong>autocompletado</strong> y <strong>validación de tipos</strong> para todo tu contenido. Es como tener un CMS gratis con TypeScript.</p>
+<h2 id="rendimiento-en-el-mundo-real">Rendimiento en el mundo real</h2>
+<p>Desde que migré mi blog personal a Astro, los resultados han sido impresionantes:</p>
+<ul>
+<li><strong>Lighthouse Score</strong>: 100/100 en todas las categorías</li>
+<li><strong>Tiempo de carga</strong>: Reducido de 3.2s a 0.8s</li>
+<li><strong>Tamaño del bundle</strong>: 85% más pequeño</li>
+<li><strong>First Contentful Paint</strong>: Mejoró de 2.1s a 0.4s</li>
+</ul>
+<p>Estos no son números inventados. Son métricas reales que impactan directamente la experiencia del usuario y el SEO.</p>
+<h2 id="conclusión">Conclusión</h2>
+<p>Astro no es solo otro framework JavaScript. Es una nueva forma de pensar sobre el desarrollo web que prioriza el rendimiento sin sacrificar la experiencia del desarrollador.</p>
+<p>Si estás construyendo un blog, un sitio de documentación, un portfolio, o cualquier sitio que sea principalmente contenido, <strong>Astro debería estar en tu radar</strong>.</p>
+<h3 id="recursos-para-empezar">Recursos para empezar</h3>
+<ul>
+<li><a href="https://docs.astro.build">Documentación oficial de Astro</a></li>
+<li><a href="https://astro.build/themes">Astro Theme Directory</a></li>
+<li><a href="https://astro.build/chat">Discord de Astro</a></li>
+</ul>
+<p>¿Ya has probado Astro? Me encantaría escuchar tu experiencia en los comentarios.</p> </div> <footer class="post-footer"> <div class="share"> <p>Comparte este artículo:</p> <div class="share-buttons"> <a href="https://twitter.com/intent/tweet?text=Guía Completa de Astro: El Framework del Futuro&url=http://localhost:4321/blog/ejemplo-astro/" target="_blank" rel="noopener">Twitter</a> <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4321/blog/ejemplo-astro/" target="_blank" rel="noopener">Facebook</a> <a href="https://www.linkedin.com/sharing/share-offsite/?url=http://localhost:4321/blog/ejemplo-astro/" target="_blank" rel="noopener">LinkedIn</a> </div> </div> </footer> </article> </main> <footer class="site-footer"> <div class="container"> <p>&copy; 2024 Mi Blog. Todos los derechos reservados.</p> </div> </footer> </body></html>
