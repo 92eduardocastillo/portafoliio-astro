@@ -5,9 +5,9 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  base: '/portafoliio-astro/', // <-- Cambia esto por el nombre exacto de tu repo
+  base: '/portafoliio-astro/',
   outDir: './docs',
-  site: 'https://tu-usuario.github.io/portafoliio-astro/',
+  site: 'https://92eduardocastillo.github.io/portafoliio-astro/',
   vite: {
     plugins: [tailwindcss()]
   },
